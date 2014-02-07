@@ -19,6 +19,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'moll/vim-node'
 Bundle 'walm/jshint.vim'
 Bundle 'pangloss/vim-javascript'
+Bundle 'evidens/vim-twig'
 
 " Nertree settings
 map <C-n> :NERDTreeToggle<CR>
