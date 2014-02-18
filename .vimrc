@@ -35,7 +35,7 @@ colorscheme solarized
 filetype plugin indent on     " required!
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
-
+set number
 " Keys remap
 
 
