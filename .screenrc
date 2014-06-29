@@ -1,0 +1,13 @@
+hardstatus alwayslastline
+hardstatus string '%{= kg}%-Lw%{= gk}%50>%n%f* %t%{= kg}%+Lw%< %{= kr}%-='
+
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10                                                            
+screen 1
+
+term screen-256color
+
+startup_message off
+
+termcapinfo xterm* ti@:te@
