@@ -21,6 +21,17 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'evidens/vim-twig'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'flazz/vim-colorschemes'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+syntax on
+set omnifunc=syntaxcomplete#Complete
+set number
+
+" Keys remap
+map <C-n> :NERDTreeToggle<CR>
 
 " go code settings
 if exists("g:did_load_filetypes")
@@ -37,27 +48,17 @@ set encoding=utf-8
 set wildignore+=*.git 
 
 " omnicomplete settings
-:set completeopt=longest,menuone
-:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Theme
 syntax enable
 set background=dark
-" let g:solarized_termcolors=256
-" colorscheme solarized
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " keys
 set backspace=2 " make backspace work like most other apps
-
-
-call vundle#end()            " required
-filetype plugin indent on    " required
-syntax on
-set omnifunc=syntaxcomplete#Complete
-set number
-" Keys remap
-
-map <C-n> :NERDTreeToggle<CR>
 
 "
 " Brief help
