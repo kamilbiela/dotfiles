@@ -54,8 +54,14 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Theme
 syntax enable
 set background=dark
+let g:solarized_contrast="high"
 let g:solarized_termcolors=256
 colorscheme solarized
+
+nmap <F1> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+imap <F1> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+nmap <F2> :.w !pbcopy<CR><CR>
+vmap <F2> :w !pbcopy<CR><CR>
 
 " keys
 set backspace=2 " make backspace work like most other apps

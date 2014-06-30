@@ -39,6 +39,6 @@ setjdk() {
   export JAVA_HOME=$(/usr/libexec/java_home -v $1)
 }
 
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.{bash_prompt}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;

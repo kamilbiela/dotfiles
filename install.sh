@@ -9,7 +9,7 @@ link_file () {
    return 0
 }
 
-for file in .vimrc .screenrc; do
+for file in .vimrc .screenrc .bash_prompt; do
    link_file $file
 done;
 
