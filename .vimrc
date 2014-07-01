@@ -23,23 +23,23 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'flazz/vim-colorschemes'
 
+" go code settings
+if exists("g:did_load_filetypes")
+	filetype off
+	filetype plugin indent off
+endif
+
+set runtimepath+=/usr/local/opt/go/libexec/misc/vim
+
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-syntax on
 set omnifunc=syntaxcomplete#Complete
 set number
 
 " Keys remap
 map <C-n> :NERDTreeToggle<CR>
-
-" go code settings
-if exists("g:did_load_filetypes")
-filetype off
-filetype plugin indent off
-endif
-set runtimepath+=$GOROOT/misc/vim " replace $GOROOT with the output 
-
 " Nertree settings
 set laststatus=2
 set encoding=utf-8
