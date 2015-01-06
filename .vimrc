@@ -1,5 +1,6 @@
 set nocompatible              " be iMproved
 filetype off                  " required!
+let mapleader = ','
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -18,10 +19,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'moll/vim-node'
 Plugin 'walm/jshint.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'evidens/vim-twig'
 Plugin 'marijnh/tern_for_vim'
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'flazz/vim-colorschemes'
+Plugin 'fatih/vim-go'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'majutsushi/tagbar'
 
 " go code settings
 if exists("g:did_load_filetypes")
@@ -31,7 +33,6 @@ endif
 
 set runtimepath+=/usr/local/opt/go/libexec/misc/vim
 
-
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -40,6 +41,18 @@ set number
 
 " Keys remap
 map <C-n> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
+
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+
 " Nertree settings
 set laststatus=2
 set encoding=utf-8
@@ -65,6 +78,12 @@ vmap <F2> :w !pbcopy<CR><CR>
 
 " keys
 set backspace=2 " make backspace work like most other apps
+
+" tabs settings 
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 "
 " Brief help
