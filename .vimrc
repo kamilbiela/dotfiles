@@ -24,6 +24,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
+Plugin 'airblade/vim-gitgutter'
 
 " go code settings
 if exists("g:did_load_filetypes")
@@ -70,6 +71,9 @@ set background=dark
 let g:solarized_contrast="high"
 let g:solarized_termcolors=256
 colorscheme solarized
+
+" gitgutter settings 
+highlight clear SignColumn
 
 nmap <F1> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 imap <F1> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
