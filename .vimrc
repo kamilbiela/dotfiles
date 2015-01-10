@@ -25,6 +25,7 @@ Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 " go code settings
 if exists("g:did_load_filetypes")
@@ -41,7 +42,8 @@ set omnifunc=syntaxcomplete#Complete
 set number
 
 " Keys remap
-map <C-n> :NERDTreeToggle<CR>
+" map <C-n> :NERDTreeToggle<CR>
+map <C-n> <plug>NERDTreeTabsToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
 au FileType go nmap <Leader>s <Plug>(go-implements)
